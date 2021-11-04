@@ -12,5 +12,4 @@ for b in str:
         else:
             result += c
     result += ' '
-
 print(result[:-1])
