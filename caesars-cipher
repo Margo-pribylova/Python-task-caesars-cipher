@@ -1,0 +1,16 @@
+a = 'abcdefghijklmnopqrstuvwxyz'
+A = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+str = input().split()
+result = ' '
+for b in str:
+    change = len([i for i in b if i.isalpha()])
+    for c in b:
+        if c in a:
+            result += a[(a.find(c) + change) % 26]
+        elif c in A:
+            result += A[(A.find(c) + change) % 26]
+        else:
+            result += c
+    result += ' '
+
+print(result[:-1])
